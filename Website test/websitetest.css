@@ -1,0 +1,193 @@
+body{
+    background-color: #C0A288;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 30px;
+}
+
+/*header*/
+
+.header{
+    margin: -40px -40px 0px -40px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 15px 0px;
+    background-color: #FFF5EB;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: end;
+    align-items: center;
+}
+
+li a { 
+    color: black;
+    font-size: 20px;
+    padding: 8px 30px;
+    text-decoration: none; /*no link line*/
+}
+
+li a:hover { /* hover state */
+    background-color: #ebd9ca;
+    color: black;
+    border-radius: 20px;
+    padding: 8px 30px;
+}
+
+li a.active { /* when the button class is active, place small rounded rectangle underneath */
+    background-color: #b39377;
+    color: white;
+    border-radius: 20px;
+    padding: 8px 30px;
+}
+
+/*evolution*/
+
+.evolution{
+    background-color: #FFF5EB;
+    border-radius: 16px;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 20px;
+    width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+    min-width: 1100px;
+    align-items: start;
+}
+
+.evolution-steps{ /*left*/
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    align-items: center;
+    gap: 15px;
+}
+
+.script-element{
+    display: grid;
+    grid-template-rows: auto auto;
+    flex-direction: column;
+    align-items: left;
+}
+
+.script-element p {
+    font-size: 13px;
+}
+
+.script-box{
+    background-color: white;
+    border-radius: 12px;
+    padding: 10px;
+    width: 150px;
+    height: 150px;
+    display: grid;
+    place-items: center;
+}
+
+.script-box img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.evolution-character{
+    display: grid;
+    grid-template-columns: auto 1fr ;
+    gap: 20px;
+    align-items: start;
+}
+
+.character-box{
+    width: 250px;
+    height: 250px;
+    background-image:url(websiteimages/riceGrid1.svg);
+    background-color: white;
+    background-size: cover;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 170px;
+    color:#402E24;
+    flex-shrink: 0;
+}
+
+.meaning p {
+    font-size: 17px;
+    min-width: 100px;
+}
+
+.arrow{
+    margin-top: -30px; /*align arrows to center*/
+}
+/*stroke steps*/
+
+.character-information{
+    background-color:#FFF5EB;
+    border-radius: 16px;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 30px;
+    box-sizing: border-box;
+    width: 50%; /* half the size of the evolution element/browser window */
+    min-width: 550px;
+    align-items: start;
+}
+
+.stroke-order {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    background-image: url(websiteimages/riceGrid1.svg);
+    background-color: white;
+    background-size: cover;
+    border-radius: 12px;
+    display: grid;
+}
+
+.character-stroke-box{
+    display: grid;
+    place-items: center;
+    font-size: 170px;
+    color: #402E24;
+    width: 100%;
+    height: 100%;
+}
+
+.play-button{
+    position:absolute;
+    top: 20px;
+    right: 20px;
+    width: 20px;
+    cursor: pointer;
+}
+
+.character-details{
+    display: grid;
+    padding: 10px 0px;
+    overflow: hidden;
+    height: 250px;
+    box-sizing: border-box;
+}
+
+.character-details p{
+    font-size: 17px;
+    color: #402E24;
+}
+
+.practice-button {
+    background-color: #b39377;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 12px 20px;
+    font-size: 17px;
+    width: fit-content;
+    justify-self: end;
+    margin-top: 34px;
+}
