@@ -29,6 +29,5 @@ $(document).scroll(function(){
 
 $(".album-thumbs").flickity({
     wrapAround: true,
-    fade: true,
     pageDots: false
 })

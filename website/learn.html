@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Learning</title>
+    <link rel="stylesheet" href="https://use.typekit.net/icc1ahc.css">
+    <script>
+  (function(d) {
+    var config = {
+      kitId: 'icc1ahc',
+      scriptTimeout: 3000,
+      async: true
+    },
+    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+  })(document);
+</script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="header">
+        <ul>    
+           <li><a href="index.html">Home</a></li>
+           <li><a href="learn.html" class="active">Learn</a></li>
+           <li><a href="basics.html">Basics</a></li>
+           <li><a href="practice.html">Practice</a></li>
+        </ul>
+    </div>   
+    
+    <div class ='evolution'>
+
+        <div class ="evolution-steps">
+            <div class ="script-element">
+                <div class ="script-box">
+                    <img id="oracle-script" src="images_animations/moonOracleScript.svg">
+                </div>
+                <p>Oracle Script</p>
+            </div>
+
+        <img class ="arrow" src="images_animations/Arrow1.svg">
+
+            <div class ="script-element">
+                <div class ="script-box">
+                    <img id="bronze-script" src="images_animations/moonBronzeScript.svg">
+                </div>
+                <p>Bronze Script</p>
+            </div>
+
+        <img class ="arrow" src="images_animations/Arrow1.svg">
+
+            <div class ="script-element">
+                <div class ="script-box">
+                    <img id="seal-script" src="images_animations/moonSealScript.svg">
+                </div>
+                <p>Seal Script</p>
+            </div>
+
+        <img class ="arrow" src="images_animations/Arrow1.svg">
+        </div>
+
+    <div class="evolution-character">
+        <div class ="character-box" id="character-display">
+            月
+        </div>
+            <div class="meaning">
+                <p><strong>Meaning:</strong> <span id="meaning-text">Moon</span></p>
+                <p><strong>Radical Meaning:</strong> <span id="radical-text">Time, Day, or Body/Flesh</span></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="character-information">
+        <div class="stroke-order">
+            <!-- <img class="play-button" src="images_animations/PlayButton.png">  -->
+            <!-- <div class="character-stroke-box" id="character-order">月</div> -->
+               <video id="stroke-animation" autoplay loop muted playsinline>
+            <source src="" type="video/mp4">
+        </video>
+    </div>
+        <div class="character-details">
+            <p><strong># of Strokes:</strong> <span id="strokes-text">Four</span></p>
+            <p><strong>Structure:</strong> <span id="structure-text">Semi-Enclosed</span></p>
+            <p><strong>Pinyin:</strong> <span id="pinyin-text">Yuè</span></p>
+            <a href="practice.html" class="practice-button">Practice</a>
+        </div>
+    </div>
+        <script src="js/characterinfo.js"></script>
+        <script src="js/learn.js"></script>
+</body>
+</html>
