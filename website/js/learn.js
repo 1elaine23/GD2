@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", function(){
     var selected = localStorage.getItem("selectedChar") || "月";
     var data = characterinfo[selected];
-    document.getElementById("character-display").textContent = selected;
-    document.getElementById("oracle-script").src = data.oracleImage;
+    document.getElementById("character-display").textContent= selected;
+    document.getElementById("oracle-script").src= data.oracleImage;
     document.getElementById("bronze-script").src = data.bronzeImage;
     document.getElementById("seal-script").src = data.sealImage;
     document.getElementById("meaning-text").textContent = data.meaning;

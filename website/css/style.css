@@ -77,6 +77,7 @@ li a.active {
 
 .script-element p {
     font-size: 13px;
+    text-align: center;
 }
 
 .script-box{
@@ -160,27 +161,6 @@ li a.active {
     display: grid;
 }
 
-/* .character-stroke-box{
-    
-    display: grid;
-    place-items: center;
-    font-size: 170px;
-    padding-top: 20px;
-    color: #402E24;
-    width: 100%;
-    height: 100%;
-    font-family: "tt-songti-chs-variable", sans-serif;
-    font-variation-settings: "wght" 400;
-} */
-
-/*.play-button{
-    position:absolute;
-    top: 20px;
-    right: 20px;
-    width: 20px;
-    cursor: pointer;
-} */
-
 #stroke-animation {
     width: 100%;
     height: 100%;
@@ -203,37 +183,30 @@ li a.active {
 }
 
 .practice-button {
-    background-color: #2C1810;
-    color: #fff9f3;
-    text-decoration: none;
+    background: transparent;
+    border: 1.5px solid #2C1810;
+    color: #2C1810;
+    font-family: "source serif pro", serif;
+    font-size: 16px;
+    padding: 10px 24px;
     border-radius: 10px;
-    padding: 12px 20px;
-    font-size: 17px;
+    text-decoration: none;
     width: fit-content;
     justify-self: end;
     margin-top: 34px;
 }
 
-/*home page*/
-
-/* .select-characters {
-    display: grid;
-    justify-items: center;
-    gap: 30px;
-    padding: 20px 0px;
-} */
-
-/* .select-title {
-    font-family: "source serif pro", serif;
+.practice-button:hover {
+    background-color: #2C1810;
     color: #ffecd9;
-    font-size: 28px;
-    font-weight: 400;
-    margin: 0;
-}  */
+}
+
+
+/*home page*/
 
 .character-grid {
     display: grid;
-    grid-template-columns: repeat(3, 200px);
+    grid-template-columns: repeat(6, 215px);
     gap: 20px;
 }
 
@@ -258,7 +231,6 @@ li a.active {
     background-color: #fff9f3;
 }
 
-
 .card-character {
     flex: 1;                      
     display: flex;
@@ -267,7 +239,6 @@ li a.active {
     font-family: "tt-songti-chs-variable", serif;
     font-variation-settings: "wght" 400;
     font-size: 100px;
-    line-height: 1;
     box-sizing: border-box;
     color: #2C1810;
     width: 100%;
@@ -294,17 +265,16 @@ li a.active {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 60px;
-    padding: 80px 60px 60px 60px;
+    padding: 60px 60px 60px 60px;
     min-height: 50vh;
     align-items: start;
 }
 
 .about-title h1 {
     font-family: "source serif pro", serif;
-    font-size: 64px;
+    font-size: 75px;
     font-weight: 700;
     color: #ffecd9;
-    line-height: 1.1;
     margin: 0;
 }
 
@@ -312,7 +282,8 @@ li a.active {
     font-family: "source serif pro", serif;
     font-size: 17px;
     color: #ffecd9;
-    line-height: 1.7;
+    line-height: 1.5;
+    max-width: 500px;
     margin: 0 0 20px 0;
 }
 
@@ -323,7 +294,7 @@ li a.active {
 }
 
 .inline-link:hover {
-    opacity: 0.6;
+    color: #F0D9BC;
 }
 
 .scroll {
@@ -335,12 +306,12 @@ li a.active {
 }
 
 .scroll-arrow {
+    padding-top: 20px;
     font-size: 50px;
     color: #ffecd9;
 }
 
-.scroll-label {
-    padding-top: 20px;
+.scroll-text {
     font-family: "source serif pro", serif;
     font-size: 17px;
     color: #ffecd9;
@@ -351,9 +322,9 @@ li a.active {
 
 .basics-title {
     font-family: "source serif pro", serif;
-    font-size: 100px;
+    font-size: 75px;
     font-weight: 700;
-    color: #F0D9BC;
+    color: #ffecd9;
     margin: 0 0 24px 0;
     padding: 0 10px;
     text-align: center;
@@ -387,15 +358,15 @@ li a.active {
     font-weight: 700;
     color: #2C1810;
     margin: 0;
-    line-height: 1.2;
     max-width: 300px;
 }
 
 .basics-text {
     font-family: "source serif pro", serif;
-    font-size: 16px;
+    font-size: 17px;
     color: #2C1810;
-    line-height: 1.8;
+    line-height: 1.5;
+    max-width: 500px;
     margin: 0;
     
 }
@@ -406,7 +377,7 @@ li a.active {
     background-color: #ffecd9;
     border: 1.5px solid #2C1810;
     border-radius: 16px;
-    padding: 20px;
+    padding: 35px;
     box-sizing: border-box;
     display: inline-block;
     width: fit-content;
@@ -415,7 +386,7 @@ li a.active {
 .canvas-toolbar {
     display: flex;
     justify-content: flex-end;
-    margin-bottom: 12px;
+    margin-bottom: 35px;
 }
 
 .clear-button {
@@ -423,11 +394,10 @@ li a.active {
     border: 1.5px solid #2C1810;
     color: #2C1810;
     font-family: "source serif pro", serif;
-    font-size: 15px;
-    padding: 6px 20px;
-    border-radius: 8px;
+    font-size: 16px;
+    padding: 10px 24px;
+    border-radius: 10px;
     cursor: pointer;
-    transition: background 0.15s;
 }
 
 .clear-button:hover {
@@ -440,5 +410,4 @@ li a.active {
     background-color: white;
     border-radius: 12px;
     border: 1.5px solid #2C1810;
-    cursor: crosshair;
 }

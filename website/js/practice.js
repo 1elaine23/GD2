@@ -64,44 +64,44 @@ if (o.from) {
 }
 }
 function clear() {
-ctx.clearRect(0, 0, w, h);
+    ctx.clearRect(0, 0, w, h);
 }
 
 function clearCanvas() {
-allShapes = [];
+    allShapes = [];
 }
 
 function setUpCanvas() {
-canvas = document.getElementById("canvas");
-canvas.width = w;
-canvas.height = h;
-ctx = canvas.getContext("2d");
+    canvas = document.getElementById("canvas");
+    canvas.width = w;
+    canvas.height = h;
+    ctx = canvas.getContext("2d");
 }
 
 var lastDot = null;
 
 function addDot(e) {
 var current = {
-    x: e.offsetX,
-    y: e.offsetY,
-    r: 6
-};
+        x: e.offsetX,
+        y: e.offsetY,
+        r: 6
+    };
 
-if (lastDot) {
-    allShapes.push({ from: lastDot, to: current });
-}
+    if (lastDot) {
+        allShapes.push({ from: lastDot, to: current });
+    }
 
-allShapes.push({ x: current.x, y: current.y, r: current.r });
-lastDot = current;
+    allShapes.push({ x: current.x, y: current.y, r: current.r });
+    lastDot = current;
 }
 
 function mouseup() {
-state.mousedown = false;
-lastDot = null; 
+    state.mousedown = false;
+    lastDot = null; 
 }
 
 function mousedown() {
-state.mousedown = true;
-lastDot = null;
-addDot(event);
+    state.mousedown = true;
+    lastDot = null;
+    addDot(event);
 }

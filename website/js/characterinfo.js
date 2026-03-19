@@ -123,8 +123,8 @@ const characterinfo = {
 
     "口":{
         meaning: "Mouth",
-        radicalMeaning: "Mouth, opening, speech",
-        Strokes: "Three",
+        radicalMeaning: "Mouth, Opening or speech",
+        strokes: "Three",
         structure: "Enclosed",
         pinyin: "kǒu",
         oracleImage: "images_animations/mouthOracleScript.svg",

@@ -13,9 +13,11 @@
     },
     h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
   })(document);
+
 </script>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <div class="header">
         <ul>    
@@ -26,7 +28,7 @@
         </ul>
     </div>   
     
-    <div class ='evolution'>
+    <div class ="evolution">
 
         <div class ="evolution-steps">
             <div class ="script-element">
@@ -70,12 +72,11 @@
 
     <div class="character-information">
         <div class="stroke-order">
-            <!-- <img class="play-button" src="images_animations/PlayButton.png">  -->
-            <!-- <div class="character-stroke-box" id="character-order">月</div> -->
-               <video id="stroke-animation" autoplay loop muted playsinline>
-            <source src="" type="video/mp4">
-        </video>
-    </div>
+            <video id="stroke-animation" autoplay loop muted playsinline>
+                <source src="" type="video/mp4">
+            </video>
+        </div>
+
         <div class="character-details">
             <p><strong># of Strokes:</strong> <span id="strokes-text">Four</span></p>
             <p><strong>Structure:</strong> <span id="structure-text">Semi-Enclosed</span></p>
@@ -83,6 +84,7 @@
             <a href="practice.html" class="practice-button">Practice</a>
         </div>
     </div>
+
         <script src="js/characterinfo.js"></script>
         <script src="js/learn.js"></script>
 </body>
