@@ -123,7 +123,7 @@ const characterinfo = {
 
     "口":{
         meaning: "Mouth",
-        radicalMeaning: "Mouth, Opening or speech",
+        radicalMeaning: "Mouth, Opening or Speech",
         strokes: "Three",
         structure: "Enclosed",
         pinyin: "kǒu",
@@ -143,6 +143,79 @@ const characterinfo = {
         bronzeImage: "images_animations/fieldBronzeScript.svg",
         sealImage: "images_animations/fieldSealScript.svg",
         animation: "images_animations/fieldAnimation.mp4"
+    },
+
+    "大":{
+        meaning: "Big or large",
+        radicalMeaning: "Big, Size or Greatness",
+        strokes: "Three",
+        structure: "Single component",
+        pinyin: "dà",
+        oracleImage: "images_animations/bigOracleScript.svg",
+        bronzeImage: "images_animations/bigBronzeScript.svg",
+        sealImage: "images_animations/bigSealScript.svg",
+        animation: "images_animations/bigAnimation.mp4"
+    },
+
+    "小":{
+        meaning: "Small or Little",
+        radicalMeaning: "Small or Little",
+        strokes: "Three",
+        structure: "Single component",
+        pinyin: "xiǎo",
+        oracleImage: "images_animations/smallOracleScript.svg",
+        bronzeImage: "images_animations/smallBronzeScript.svg",
+        sealImage: "images_animations/smallSealScript.svg",
+        animation: "images_animations/smallAnimation.mp4"
+    },
+
+    "手":{
+        meaning: "Hand",
+        radicalMeaning: "Hand or Action",
+        strokes: "Four",
+        structure: "Single component",
+        pinyin: "shǒu",
+        oracleImage: "images_animations/handOracleScript.svg",
+        bronzeImage: "images_animations/handBronzeScript.svg",
+        sealImage: "images_animations/handSealScript.svg",
+        animation: "images_animations/handAnimation.mp4"
+    },
+
+    "工":{
+        meaning: "Work or Labor",
+        radicalMeaning: "Work, Construction or Craft",
+        strokes: "Three",
+        structure: "Single component",
+        pinyin: "gōng",
+        oracleImage: "images_animations/workOracleScript.svg",
+        bronzeImage: "images_animations/workBronzeScript.svg",
+        sealImage: "images_animations/workSealScript.svg",
+        animation: "images_animations/workAnimation.mp4"
+    },
+
+    "文":{
+        meaning: "Language, Literature or Culture",
+        radicalMeaning: "Language, Literature or Culture",
+        strokes: "Four",
+        structure: "Single component",
+        pinyin: "wén",
+        oracleImage: "images_animations/literatureOracleScript.svg",
+        bronzeImage: "images_animations/literatureBronzeScript.svg",
+        sealImage: "images_animations/literatureSealScript.svg",
+        animation: "images_animations/literatureAnimation.mp4"
+    },
+
+    "又":{
+        meaning: "Again and Also",
+        radicalMeaning: "Hand (in ancient forms) or Repetition",
+        strokes: "Two",
+        structure: "Single component",
+        pinyin: "yòu",
+        oracleImage: "images_animations/alsoOracleScript.svg",
+        bronzeImage: "images_animations/alsoBronzeScript.svg",
+        sealImage: "images_animations/alsoSealScript.svg",
+        animation: "images_animations/alsoAnimation.mp4"
     }
+
 
 };

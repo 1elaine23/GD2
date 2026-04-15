@@ -3,24 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <title>Practice</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/pzz3gvu.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900&family=Prata&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styleblue.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        (function(d) {
+        var config = {
+        kitId: 'icc1ahc',
+        scriptTimeout: 3000,
+        async: true
+        },
+        h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+        })(document);
+    </script>
 </head>
 <body>
     <div class="header">
         <ul>    
            <li><a href="index.html">Home</a></li>
-           <li><a href="basics.html">Basics</a></li>
+           <li><a href="basics.html">General</a></li>
            <li><a href="practice.html"class="active">Practice</a></li>
         </ul>
     </div> 
 
+
+<div class="practice">
+
     <div class="canvas-container">
-    <div class="canvas-toolbar">
-        <button class="clear-button" onclick="clearCanvas()">Clear</button>
-    </div>
-        <canvas id="canvas"></canvas>
+        <div class="canvas-toolbar">
+            <button class="clear-button" onclick="clearCanvas()">Clear</button>
+        </div>
+            <canvas id="canvas"></canvas>
     </div>
 
+    <div class="practice-guide">
+        <video id="practice-animation" autoplay loop muted playsinline>
+        <source src="" type="video/mp4">
+        </video>
+        <a href="learnselect.html" class="select-button">Practice Another</a>
+    </div>
+</div>
+
+    <script src="js/characterinfo.js"></script>
     <script src="js/practice.js"></script>
 </body>
 </html>

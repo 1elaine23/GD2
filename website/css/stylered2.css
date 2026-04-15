@@ -1,6 +1,7 @@
 
 body{
-    background-color: #6c4d35;
+    font-family: "Calluna", serif;
+    background-color: #F7BB5C;
     display: grid;
     grid-template-columns: 1fr;
     margin: 0; /* set margin to 0, broswer was adding a  gap around the header at smaller widths */
@@ -17,12 +18,12 @@ ul {
     list-style-type: none;
     margin: 0;
     padding: 15px 0px;
-    background-color: #ffecd9;
+    background-color: #FFF3D9;
     display: grid;
     grid-template-columns: auto auto auto auto;
     justify-content: end;
     align-items: center;
-    border-bottom: #2C1810 solid 1px;
+    border-bottom: #531010 solid 1px;
 }
 
 li a { 
@@ -33,15 +34,15 @@ li a {
 }
 
 li a:hover { 
-    background-color: #dbbc99;
+    background-color: #FFE3A1;
     color: black;
     border-radius: 20px;
     padding: 8px 30px;
 }
 
 li a.active { 
-    background-color: #2C1810;
-    color: #fff9f3;
+    background-color: #531010;
+    color: #FFE3A1;
     border-radius: 20px;
     padding: 8px 30px;
 }
@@ -60,17 +61,17 @@ li a.active {
 }
 
 .select-text {
-    
+    font-family: "DM Serif Display", serif;
     font-size: 2.5rem;
     font-weight: 700;
-    color: #ffecd9; 
+    color: #531010; 
     text-align: center; 
     padding-top: 50px;  
 }
 
 .character-card {
-    background-color: #ffecd9;
-    border: 1px solid #2C1810;
+    background-color: #FFF3D9;
+    border: 1px solid #531010;
     border-radius: 15px;
     width: 100%;
     aspect-ratio: 1;
@@ -98,13 +99,13 @@ li a.active {
     font-variation-settings: "wght" 400;
     font-size: 40cqw;
     box-sizing: border-box;
-    color: #2C1810;
+    color: #770000;
     width: 100%;
 }
 
 .card-meaning-bar {
     width: 100%;
-    background-color: #dbbc99;
+    background-color: #FFE3A1;
     padding: 8px 0;
     display: flex;
     align-items: center;
@@ -115,7 +116,7 @@ li a.active {
 .card-meaning {
     
     font-size: clamp(0.9rem, 1rem, 1.25rem);
-    color: #2C1810;
+    color: #531010;
     margin: 0;
 }
 
@@ -131,10 +132,10 @@ li a.active {
 }
 
 .about-title h1 {
-    
+    font-family: "DM Serif Display", serif;
     font-size: clamp(3.5rem, 6vw, 8rem);
     font-weight: 400;
-    color: #402E24;
+    color: #770000;
     margin: 0;
     max-width: 8ch;
 }
@@ -143,7 +144,7 @@ li a.active {
     
     padding-top: 20px;
     font-size: clamp(1rem, 1.1vw, 1.25rem);
-    color: #6c4d35;
+    color: #770000;
     line-height: 1.5;
     max-width: 500px;
     margin: 0 0 20px 0;
@@ -151,12 +152,12 @@ li a.active {
 }
 
 .inline-link {
-    color: #6c4d35;
+    color: #770000;
     text-decoration: underline;
 }
 
 .inline-link:hover {
-    color: #2C1810;
+    color: #531010;
 }
 
 .scroll {
@@ -170,17 +171,17 @@ li a.active {
 .scroll-arrow {
     padding-top: 20px;
     font-size: clamp(2rem, 2.5vw, 3rem);
-    color: #402E24;
+    color: #770000;
 }
 
 .scroll-text {
     
     font-size: clamp(1rem, 1.1vw, 1.25rem);
-    color: #402E24;
+    color: #770000;
 }
 
 .home-top {
-    background-color: #ffecd9;   
+    background-color: #FFF3D9;   
     padding: 30px;
     padding-bottom: 50px;
     display: flex;
@@ -192,8 +193,8 @@ li a.active {
 /*evolution*/
 
 .evolution{
-    background-color: #ffecd9;
-    border: 1px solid #2C1810;
+    background-color: #FFF3D9;
+    border: 1px solid #531010;
     border-radius: 1vw;
     padding: 30px;
     display: grid;
@@ -226,7 +227,7 @@ li a.active {
 
 .script-box{
     background-color: #fff9f3;
-    border: 1px solid #2C1810;
+    border: 1px solid #531010;
     border-radius: 15px;
     padding: 0.68vw;
     width: clamp(100px, 10.2vw, 165px);
@@ -251,7 +252,7 @@ li a.active {
 .character-box{
     width: clamp(250px, 17vw, 300px);
     height: clamp(250px, 17vw, 300px);
-    border: 1px solid #2C1810;
+    border: 1px solid #531010;
     box-sizing: border-box;
     background-image:url(../images_animations/riceGrid1.svg);
     background-color: #fff9f3;
@@ -263,7 +264,7 @@ li a.active {
     justify-content: center;
     font-size: clamp(170px, 12vw, 175px);
     padding-top: 15%;
-    color:#402E24;
+    color:#770000;
     flex-shrink: 0;
     font-family: "tt-songti-chs-variable", serif;
     font-variation-settings: "wght" 400;
@@ -280,8 +281,8 @@ li a.active {
 /*stroke steps*/
 
 .character-information{
-    background-color:#ffecd9;
-    border: 1px solid #2C1810;
+    background-color:#FFF3D9;
+    border: 1px solid #531010;
     border-radius: 1vw;
     padding: 30px;
     display: grid;
@@ -295,7 +296,7 @@ li a.active {
 
 .stroke-order {
     position: relative;
-    border: 1px solid #2C1810;
+    border: 1px solid #531010;
     width: 250px;
     height: auto;
     background-image: url(../images_animations/riceGrid1.svg);
@@ -323,14 +324,14 @@ li a.active {
 
 .character-details p, .meaning p{
     font-size: 1rem;
-    color: #402E24;
+    color: #770000;
     font-family:"source serif pro", serif;
 }
 
 .practice-button {
     background: transparent;
-    border: 1px solid #2C1810;
-    color: #2C1810;
+    border: 1px solid #531010;
+    color: #531010;
     font-size: 1rem;
     padding: 0.68vw 1.63vw;
     border-radius: 0.68vw;
@@ -341,8 +342,8 @@ li a.active {
 }
 
 .practice-button:hover {
-    background-color: #2C1810;
-    color: #ffecd9;
+    background-color: #531010;
+    color: #FFF3D9;
 }
 
 /*Basics page*/
@@ -351,14 +352,14 @@ li a.active {
     
     font-size: clamp(3.5rem, 6vw, 8rem);
     font-weight: 700;
-    color: #ffecd9;
+    color: #FFF3D9;
     padding: 0 0.68vw;
     text-align: center;
 }
 
 .basics-card {
-    background-color: #ffecd9;
-    border: 1px solid #2C1810;
+    background-color: #FFF3D9;
+    border: 1px solid #531010;
     border-radius: 16px;
     padding: 0px 40px;
     box-sizing: border-box;
@@ -372,7 +373,7 @@ li a.active {
     grid-template-columns: 1fr 1fr;
     gap: 60px;
     padding: 40px 0px;
-    border-bottom: 1px solid #2C1810;
+    border-bottom: 1px solid #531010;
     align-items: start;
 }
 
@@ -384,7 +385,7 @@ li a.active {
     
     font-size: clamp(2rem, 3vw, 2.5rem);     
     font-weight: 700;
-    color: #2C1810;
+    color: #531010;
     margin: 0;
     max-width: 320px;
 }
@@ -392,7 +393,7 @@ li a.active {
 .basics-text {
     
     font-size: 1rem;
-    color: #2C1810;
+    color: #531010;
     line-height: 1.5;
     margin: 0;
     max-width: 500px;
@@ -402,8 +403,8 @@ li a.active {
 /*Practice page*/
 
 .canvas-container {
-    background-color: #ffecd9;
-    border: 1px solid #2C1810;
+    background-color: #FFF3D9;
+    border: 1px solid #531010;
     border-radius: 15px;
     padding: 30px;
     box-sizing: border-box;
@@ -420,8 +421,8 @@ li a.active {
 
 .clear-button {
     background: transparent;
-    border: 1px solid #2C1810;
-    color: #2C1810;
+    border: 1px solid #531010;
+    color: #531010;
     
     font-size: 1rem;
     padding: 10px 30px;
@@ -430,15 +431,15 @@ li a.active {
 }
 
 .clear-button:hover {
-    background-color: #2C1810;
-    color: #ffecd9;
+    background-color: #531010;
+    color: #FFF3D9;
 }
 
 #canvas {
     display: block;
     background-color: white;
     border-radius: 15px;
-    border: 1px solid #2C1810;
+    border: 1px solid #531010;
 }
 
 .practice{
@@ -449,8 +450,8 @@ li a.active {
 }
 
 .practice-guide{
-    background-color:#ffecd9;
-    border: 1px solid #2C1810;
+    background-color:#FFF3D9;
+    border: 1px solid #531010;
     border-radius: 15px;
     padding: 30px;
     gap: 30px;
@@ -464,7 +465,7 @@ li a.active {
     object-fit: contain;
     border-radius: 10px;
     background-color: #fff9f3;
-    border: 1px solid #2C1810;
+    border: 1px solid #531010;
 }
 
 /*different sizes*/

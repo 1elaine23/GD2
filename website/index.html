@@ -3,21 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <title>Home</title>
-    <link rel="stylesheet" href="https://use.typekit.net/icc1ahc.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/pzz3gvu.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900&family=Prata&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styleblue.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
     <div class="header">
         <ul>
             <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="basics.html">Basics</a></li>
+            <li><a href="basics.html">General</a></li>
             <li><a href="practice.html">Practice</a></li>      
         </ul>
     </div>
 
+    <div class="home-top">
     <div class="about">
         <div class="about-title">
-            <h1>Learn How To Write Chinese</h1>
+            <h1>Basics of Writing Chinese</h1>
         </div>
         <div class="about-description">
             <p>This website is an interactive resource for learning 
@@ -28,8 +33,8 @@
             <p>Many Chinese characters were derived from visual
             representations of ideas. Understanding why each character
             looks the way it does helps with recognising and writing them.
-            This resource focuses on nine common characters that also
-            function as <a href="basics.html" class="inline-link">radicals</a>.</p>
+            This resource focuses on simple characters that also
+            function as common <a href="basics.html" class="inline-link">radicals</a>.</p>
         </div>
     </div>
 
@@ -37,8 +42,10 @@
         <p class="scroll-text">Start Learning</p>
         <span class="scroll-arrow">↓</span>
     </div>
+    </div>
 
     <div class="select-characters">
+        <p class ="select-text">Select A Character</p>
         <div class="character-grid">
 
             <div class="character-card" onclick="selectChar('月')">
@@ -125,6 +132,49 @@
                 </div>
             </div>
 
+              <div class="character-card" onclick="selectChar('大')">
+                <div class="card-character">大</div>
+                <div class="card-meaning-bar">
+                    <p class="card-meaning">Big</p>
+                </div>
+            </div>
+
+            <div class="character-card" onclick="selectChar('小')">
+                <div class="card-character">小</div>
+                <div class="card-meaning-bar">
+                    <p class="card-meaning">Small</p>
+                </div>
+            </div>
+            
+            <div class="character-card" onclick="selectChar('手')">
+                <div class="card-character">手</div>
+                <div class="card-meaning-bar">
+                    <p class="card-meaning">Hand</p>
+                </div>
+            </div>
+
+            <div class="character-card" onclick="selectChar('工')">
+                <div class="card-character">工</div>
+                <div class="card-meaning-bar">
+                    <p class="card-meaning">Work</p>
+                </div>
+            </div>
+
+            <div class="character-card" onclick="selectChar('文')">
+                <div class="card-character">文</div>
+                <div class="card-meaning-bar">
+                    <p class="card-meaning">Literature</p>
+                </div>
+            </div>
+
+            <div class="character-card" onclick="selectChar('又')">
+                <div class="card-character">又</div>
+                <div class="card-meaning-bar">
+                    <p class="card-meaning">Also</p>
+                </div>
+            </div>
+
+            
         </div>
     </div>
 

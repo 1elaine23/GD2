@@ -15,6 +15,7 @@ document.getElementById("canvas").onmousemove = mousemove;
 
 setUpCanvas();
 animationLoop();
+loadCharacter();
 
 function animationLoop() {
     clear();
@@ -49,8 +50,8 @@ r: 6,
 
 function drawCircle(o) {
 ctx.beginPath();
-ctx.fillStyle = "#2C1810";
-ctx.strokeStyle = "#2C1810";
+ctx.fillStyle = "#10172C";
+ctx.strokeStyle = "#10172C";
 ctx.lineWidth = o.r * 2;  
 ctx.lineCap = "round";   
 
@@ -63,6 +64,7 @@ if (o.from) {
     ctx.fill();
 }
 }
+
 function clear() {
     ctx.clearRect(0, 0, w, h);
 }
@@ -104,4 +106,13 @@ function mousedown() {
     state.mousedown = true;
     lastDot = null;
     addDot(event);
+}
+
+function loadCharacter() {
+    var selected = localStorage.getItem("selectedChar") || "月";
+    var data = characterinfo[selected];
+    var video = document.getElementById("practice-animation");
+    video.src = data.animation;
+    video.load();
+    video.play();
 }
