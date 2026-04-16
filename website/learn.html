@@ -19,19 +19,167 @@
         },
         h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
         })(document);
+        function resetLearn() {// reset to selection grid when button is clicked
+    localStorage.removeItem("selectedChar");
+    document.getElementById("learn-content").style.display = "none";
+    document.getElementById("learn-select").style.display = "block";
+    }
+
 </script>
 </head>
 
 <body>
-    <div class="header">
+    <nav class="header">
         <ul>    
            <li><a href="index.html">Home</a></li>
            <li><a href="learn.html" class="active">Learn</a></li>
-           <li><a href="basics.html">General</a></li>
            <li><a href="practice.html">Practice</a></li>
         </ul>
-    </div>   
+    </nav> 
+
+
+    <div id ="learn-select"> 
+    <div class="select-characters">
+        <p class ="select-text">Select A Character</p>
+        <div class="character-grid">
+
+            <div class="character-card" onclick="selectChar('月')">
+                <div class="card-character">月</div>
+                <div class="card-meaning-bar">
+                    <p class="card-meaning">Moon</p>
+                </div>
+            </div>
+
+            <div class="character-card" onclick="selectChar('火')">
+                <div class="card-character">火</div>
+                <div class="card-meaning-bar">
+                    <p class="card-meaning">Fire</p>
+                </div>
+            </div>
+
+            <div class="character-card" onclick="selectChar('日')">
+                <div class="card-character">日</div>
+                <div class="card-meaning-bar">
+                    <p class="card-meaning">Sun</p>
+                </div>
+            </div>
+
+            <div class="character-card" onclick="selectChar('门')">
+                <div class="card-character">门</div>
+                <div class="card-meaning-bar">
+                    <p class="card-meaning">Door</p>
+                </div>
+            </div>
+
+            <div class="character-card" onclick="selectChar('女')">
+                <div class="card-character">女</div>
+                <div class="card-meaning-bar">
+                    <p class="card-meaning">Woman</p>
+                </div>
+            </div>
+
+            <div class="character-card" onclick="selectChar('子')">
+                <div class="card-character">子</div>
+                <div class="card-meaning-bar">
+                    <p class="card-meaning">Child</p>
+                </div>
+            </div>
+
+            <div class="character-card" onclick="selectChar('人')">
+                <div class="card-character">人</div>
+                <div class="card-meaning-bar">
+                    <p class="card-meaning">Person</p>
+                </div>
+            </div>
+
+            <div class="character-card" onclick="selectChar('水')">
+                <div class="card-character">水</div>
+                <div class="card-meaning-bar">
+                    <p class="card-meaning">Water</p>
+                </div>
+            </div>
+
+            <div class="character-card" onclick="selectChar('木')">
+                <div class="card-character">木</div>
+                <div class="card-meaning-bar">
+                    <p class="card-meaning">Tree</p>
+                </div>
+            </div>
+
+            <div class="character-card" onclick="selectChar('口')">
+                <div class="card-character">口</div>
+                <div class="card-meaning-bar">
+                    <p class="card-meaning">Mouth</p>
+                </div>
+            </div>
+
+            <div class="character-card" onclick="selectChar('土')">
+                <div class="card-character">土</div>
+                <div class="card-meaning-bar">
+                    <p class="card-meaning">Earth</p>
+                </div>
+            </div>
+
+            <div class="character-card" onclick="selectChar('田')">
+                <div class="card-character">田</div>
+                <div class="card-meaning-bar">
+                    <p class="card-meaning">Field</p>
+                </div>
+            </div>
+
+              <div class="character-card" onclick="selectChar('大')">
+                <div class="card-character">大</div>
+                <div class="card-meaning-bar">
+                    <p class="card-meaning">Big</p>
+                </div>
+            </div>
+
+            <div class="character-card" onclick="selectChar('小')">
+                <div class="card-character">小</div>
+                <div class="card-meaning-bar">
+                    <p class="card-meaning">Small</p>
+                </div>
+            </div>
+            
+            <div class="character-card" onclick="selectChar('手')">
+                <div class="card-character">手</div>
+                <div class="card-meaning-bar">
+                    <p class="card-meaning">Hand</p>
+                </div>
+            </div>
+
+            <div class="character-card" onclick="selectChar('工')">
+                <div class="card-character">工</div>
+                <div class="card-meaning-bar">
+                    <p class="card-meaning">Work</p>
+                </div>
+            </div>
+
+            <div class="character-card" onclick="selectChar('文')">
+                <div class="card-character">文</div>
+                <div class="card-meaning-bar">
+                    <p class="card-meaning">Literature</p>
+                </div>
+            </div>
+
+            <div class="character-card" onclick="selectChar('又')">
+                <div class="card-character">又</div>
+                <div class="card-meaning-bar">
+                    <p class="card-meaning">Also</p>
+                </div>
+            </div>     
+        </div>
+    </div>
+    </div>
+
+    <script>
+        function selectChar(character) {
+            localStorage.setItem("selectedChar", character);
+            window.location.href = "learn.html";
+        }
+    </script>
     
+    <div id ="learn-content" style="display:none;">
     <div class ="evolution">
 
         <div class ="evolution-steps">
@@ -70,6 +218,7 @@
             <div class="meaning">
                 <p><strong>Meaning:</strong> <span id="meaning-text">Moon</span></p>
                 <p><strong>Radical Meaning:</strong> <span id="radical-text">Time, Day, or Body/Flesh</span></p>
+                <a href="" class="learn-button" onclick="resetLearn()">Select Another</a>
             </div>
         </div>
     </div>
@@ -87,6 +236,7 @@
             <p><strong>Pinyin:</strong> <span id="pinyin-text">Yuè</span></p>
             <a href="practice.html" class="practice-button">Practice</a>
         </div>
+    </div>
     </div>
 
         <script src="js/characterinfo.js"></script>

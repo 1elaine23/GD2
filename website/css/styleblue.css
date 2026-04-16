@@ -1,6 +1,4 @@
 body{
-    /*font-family: "Calluna", serif;*/
-    /*font-family: "Source-Serif-3", sans-serif;*/
     font-family: "freight-text-pro", serif;
     background-color: #35476C;
     display: grid;
@@ -30,7 +28,7 @@ ul {
 
 li a { 
     color: black;
-    font-size: clamp(1.2rem, 1vw, 2rem);
+    font-size: clamp(1.2rem, 1vw, 2rem); /* using clamp so that the text can scale with screen size, previously I was using vw which caused the text to be too large sometimes*/
     padding: 8px 30px;
     text-decoration: none; 
 }
@@ -51,21 +49,28 @@ li a.active {
 
 
 
-/*home page*/
+/*select grid*/
 
 .character-grid {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     gap: clamp(20px, 2vw, 25px);
-    max-width: 1400px;
-    margin: clamp(20px, 2vw, 25px); 
-    padding: 30px; 
-}
+    width: 100%;
+    max-width: 1400px; /* set mac width so the cards dont grow super large on large screens*/
 
+    margin: clamp(20px, 2vw, 25px);
+    padding: 30px;
+    box-sizing: border-box;
+}
+.select-characters{ /* added a centering to the grid so that when the screen size is above 1400px, the grid stays centered*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .select-text { 
     font-family: "freight-display-pro", serif;
     /*font-family: "noto serif display";*/  
-    font-size: 2.5rem;
+    font-size: clamp(3.5rem, 6vw, 8rem);
     font-weight: 700;
     color: #FFFAF3; 
     text-align: center; 
@@ -75,16 +80,16 @@ li a.active {
 .character-card {
     background-color: #FFFAF3;
     border: 1px solid #10172C;
-    border-radius: 15px;
+    border-radius: 15px;    
     width: 100%;
-    aspect-ratio: 1;
     height: auto;
+    aspect-ratio: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
     container-type: inline-size;
     cursor: pointer;
-    overflow: hidden;      
+    overflow: hidden; 
     transition: transform 0.15s, background-color 0.15s;
 }
 
@@ -103,6 +108,7 @@ li a.active {
     font-size: 40cqw;
     box-sizing: border-box;
     color: #10172C;
+    padding-top: 10%;     
     width: 100%;
 }
 
@@ -123,6 +129,8 @@ li a.active {
     margin: 0;
 }
 
+/*home about section*/
+
 .about {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -135,8 +143,6 @@ li a.active {
 
 .about-title h1 {
     font-size: clamp(3.5rem, 6vw, 8rem);
-    /*font-family: "noto serif display";*/
-    /*font-family: "DM Serif Display", serif;*/
     font-family: "freight-display-pro", serif;
     font-weight: 700;
     color: #242F40;
@@ -149,7 +155,7 @@ li a.active {
     font-size: clamp(1rem, 1.1vw, 1.25rem);
     color: #35476C;
     max-width: 500px;
-    line-height: 175%;
+    line-height: 1.4;
 }
 
 .inline-link {
@@ -191,7 +197,13 @@ li a.active {
 }
 
 /*learning page*/
+
 /*evolution*/
+
+#learn-content{
+    max-width: 1500px;
+    margin: auto;
+}
 
 .evolution{
     background-color: #FFFAF3;
@@ -200,7 +212,7 @@ li a.active {
     padding: 30px;
     display: grid;
     grid-template-columns: auto 1fr;
-    gap: 18px;
+    gap: clamp(20px, 2vw, 25px);
     overflow: hidden;
     box-sizing: border-box;
     align-items: start;
@@ -227,11 +239,11 @@ li a.active {
 }
 
 .script-box{
-    background-color: #F6FEFF;
+    background-color: #fcfeff;
     border: 1px solid #10172C;
     border-radius: 15px;
     padding: 0.68vw;
-    width: clamp(100px, 10.2vw, 165px);
+    width: clamp(80px, 7vw, 125px); /*ajusted sizing to have less difference because when it was getting to large it made the page too wide, caused horizontal scrolling*/
     height: auto;
     display: grid;
     place-items: center;
@@ -251,12 +263,12 @@ li a.active {
 }
 
 .character-box{
-    width: clamp(250px, 17vw, 300px);
-    height: clamp(250px, 17vw, 300px);
+    width: clamp(230px, 15vw, 270px);
+    height: clamp(230px, 15vw, 270px);
     border: 1px solid #10172C;
     box-sizing: border-box;
     background-image:url(../images_animations/riceGrid1.svg);
-    background-color: #F6FEFF;
+    background-color: #fcfeff;
     background-size: cover;
     background-position: center;
     border-radius: 15px;
@@ -271,6 +283,12 @@ li a.active {
     font-variation-settings: "wght" 400;
 }
 
+.meaning{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
 .meaning p {
     min-width: 6.8vw;
 }
@@ -279,6 +297,28 @@ li a.active {
     margin-top: -2.04vw; 
     justify-self: center;
 }
+
+.learn-button{
+    background: transparent;
+    border: 1px solid #10172C;
+    color: #10172C;
+    font-size: 1rem;
+    padding: 10px 30px;
+    border-radius: 10px;
+    text-decoration: none;
+    width: fit-content;
+    margin-top: auto;
+    align-self: flex-end;
+    text-align: center;
+
+}
+
+.learn-button:hover {
+    background-color: #10172C;
+    color: #FFFAF3;
+}
+
+
 /*stroke steps*/
 
 .character-information{
@@ -292,17 +332,17 @@ li a.active {
     margin: clamp(20px, 2vw, 25px);
     margin-top: 0;
     display: grid;
-    grid-template-columns: 250px 1fr;
+    grid-template-columns: 230px 1fr;
     align-items: stretch;
 }
 
 .stroke-order {
     position: relative;
     border: 1px solid #10172C;
-    width: 250px;
+    width: 230px;
     height: auto;
     background-image: url(../images_animations/riceGrid1.svg);
-    background-color: #F6FEFF;
+    background-color: #fcfeff;
     background-size: cover;
     border-radius: 15px;
     display: grid;
@@ -350,11 +390,10 @@ li a.active {
     color: #FFFAF3;
 }
 
-/*Basics page*/
+/*Home General Information*/
 
 .basics-title {
     font-family: "freight-display-pro", serif;
-    /*font-family: "noto serif display";*/
     font-size: clamp(3.5rem, 6vw, 8rem);
     font-weight: 700;
     color: #FFFAF3;
@@ -362,7 +401,7 @@ li a.active {
     text-align: center;
 }
 
-.basics{ /*had to add a wrapper because i couldnt center and have my margin*/
+.basics{ /*had to add a wrapper because i couldn't both center and have my margin in one*/
     display: flex;
     justify-content: center;
 }
@@ -411,13 +450,16 @@ li a.active {
 
 /*Practice page*/
 
-.canvas-container {
+.canvas-container { /* removed fit content, it was causing the container to resize weirdly and gave the p5 canvas the wrong size information*/
     background-color: #FFFAF3;
     border: 1px solid #10172C;
     border-radius: 15px;
     padding: clamp(20px, 2vw, 25px);
-    width: fit-content;
+    width: auto;   
+    flex: 1;         
+    min-width: 0;       
     margin: clamp(20px, 2vw, 25px);
+    box-sizing: border-box;
 }
 
 .canvas-toolbar {
@@ -443,10 +485,13 @@ li a.active {
 }
 
 #canvas {
+   width: 100%;
+}
+
+.canvas-draw{
     display: block;
-    width: 100%;
-    height: auto;
-    background-color: white;
+    width: 100% !important; /* allows me to prioritize css scaling over the fixed p5 scaling so my canvas can behave as itended*/
+    height: auto !important;
     border-radius: 15px;
     border: 1px solid #10172C;
 }
@@ -454,8 +499,8 @@ li a.active {
 .practice{
     display: grid;
     grid-template-columns: 1fr auto;
-    max-width: 1500px;
-    margin: 0 auto;  
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 .practice-guide{
@@ -465,7 +510,7 @@ li a.active {
     padding: 30px;
     margin: clamp(20px, 2vw, 25px);
     margin-left: 0;
-    display: flex;
+    display: flex; /* using flex instead of grid so that my button can align to the bottom of the animation box, previously I was aligning it by pixel*/
     flex-direction: column;
     gap: clamp(20px, 2vw, 25px);
 }
@@ -533,6 +578,10 @@ li a.active {
         margin-top: 0;
     }
 
+    .select-button{
+        margin-left: auto;
+    }
+
     .script-element{
         justify-items: center;
     }
@@ -568,6 +617,7 @@ li a.active {
 
     .evolution-steps {
         grid-template-columns: auto auto auto; 
+        gap: clamp(15px, 1vw, 20px);
     }
 
     .evolution-character{
@@ -584,5 +634,31 @@ li a.active {
             
     }
 
+    .basics-row{
+        grid-template-columns: auto;
+    }
+
+    .practice-guide {
+        padding: 20px;
+        gap: 15px;
+    }
+
+    #practice-animation {
+        width: 150px;
+    }
+
+    .character-information{
+        min-width: 92vw;
+        width: 335px;
+        height: auto;
+    }
+
+    .evolution{
+        min-width: 92vw;
+        width: 335px;
+        height: auto;
+
+
 }
 
+}

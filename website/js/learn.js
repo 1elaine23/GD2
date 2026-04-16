@@ -1,7 +1,18 @@
 document.addEventListener("DOMContentLoaded", function(){
-    var selected = localStorage.getItem("selectedChar") || "月";
-    var data = characterinfo[selected];
-    document.getElementById("character-display").textContent= selected;
+    var selected = localStorage.getItem("selectedChar")
+
+    const content = document.getElementById("learn-content")
+    const selector = document.getElementById("learn-select")
+
+    if (!selected){ // if selected is false show the selection grid
+        content.style.display = "none";
+        selector.style.display = "block";
+        return;
+    }   content.style.display = "block";
+        selector.style.display = "none";
+
+    var data = characterinfo[selected]; //get the information for the selected word
+    document.getElementById("character-display").textContent= selected; // replacing each section with the information based on selected word 
     document.getElementById("oracle-script").src= data.oracleImage;
     document.getElementById("bronze-script").src = data.bronzeImage;
     document.getElementById("seal-script").src = data.sealImage;
