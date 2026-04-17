@@ -62,6 +62,7 @@ function initCanvas() { // recreates the canvas each time a character is selecte
         myP5 = null;
     }
 
+    //added the drawing functions inside here
     myP5 = new p5(function(p) {
         p.setup = function() {
             let w = getContainerWidth();

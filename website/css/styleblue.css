@@ -36,14 +36,14 @@ li a {
 li a:hover { 
     background-color: #839ABB;
     color: black;
-    border-radius: 20px;
+    border-radius: 10px; /*border radius to match header to my buttons*/
     padding: 8px 30px;
 }
 
 li a.active { 
     background-color: #10172C;
     color: #F6FEFF;
-    border-radius: 20px;
+    border-radius: 10px;
     padding: 8px 30px;
 }
 
@@ -80,7 +80,7 @@ li a.active {
 .character-card {
     background-color: #FFFAF3;
     border: 1px solid #10172C;
-    border-radius: 15px;    
+    border-radius: 15px;  
     width: 100%;
     height: auto;
     aspect-ratio: 1;
@@ -93,7 +93,7 @@ li a.active {
     transition: transform 0.15s, background-color 0.15s;
 }
 
-.character-card:hover {
+.character-card:hover { /*animation so that it is obvious what you are clicking*/
     transform: scale(1.05);
     background-color: #F6FEFF;
 }
@@ -123,7 +123,6 @@ li a.active {
 }
 
 .card-meaning {
-    
     font-size: clamp(0.9rem, 1rem, 1.25rem);
     color: #10172C;
     margin: 0;
@@ -200,9 +199,11 @@ li a.active {
 
 /*evolution*/
 
-#learn-content{
-    max-width: 1500px;
-    margin: auto;
+.learn{
+    display: flex;
+    flex-direction: column;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 .evolution{
@@ -212,7 +213,7 @@ li a.active {
     padding: 30px;
     display: grid;
     grid-template-columns: auto 1fr;
-    gap: clamp(20px, 2vw, 25px);
+    gap: clamp(20px, 2vw, 25px); /*same gap and margin for consistent gaps*/
     overflow: hidden;
     box-sizing: border-box;
     align-items: start;
@@ -453,7 +454,7 @@ li a.active {
 .canvas-container { /* removed fit content, it was causing the container to resize weirdly and gave the p5 canvas the wrong size information*/
     background-color: #FFFAF3;
     border: 1px solid #10172C;
-    border-radius: 15px;
+    border-radius: 15px; /*containers have a slightly larger border radius so that the curves look nice with the buttons and inside elements*/  
     padding: clamp(20px, 2vw, 25px);
     width: auto;   
     flex: 1;         
@@ -543,7 +544,7 @@ li a.active {
 /*different sizes*/
 @media(max-width:1400px){
     .character-grid{
-        grid-template-columns: repeat(5, 1fr);
+        grid-template-columns: repeat(5, 1fr); /*reducded ammount of words per line when the screen gets smaller so reading and selection is still easy*/
     }
 }
 
@@ -569,6 +570,11 @@ li a.active {
     .practice{
         grid-template-columns: 1fr;
     }
+
+    .canvas-draw{
+            max-height: 500px; /*it got longer at this size, so I set a max to keep it from getting to long*/
+    }
+
 
     .practice-guide{
         flex-direction: row;
